@@ -1,0 +1,25 @@
+<%= form_with(model: event) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date %>
+    <div class="date-field">
+      <%= f.date_select :date, type: "date" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :attendee_emails, 'Attendees (comma separated emails)' %>
+    <%= f.text_field :attendee_emails, value: event.attendee_emails %>
+  </div>
+
+  <%= f.submit submit_text, class: 'submit-btn' %>
+<% end %>
