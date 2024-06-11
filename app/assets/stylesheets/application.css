@@ -13,3 +13,159 @@
  *= require_tree .
  *= require_self
  */
+
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  background-color: black;
+  color: #fefefe;
+  margin: 0px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #fefefe;
+}
+
+a:hover {
+  color: grey;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: rgb(34, 34, 34);
+}
+
+.right {
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  text-decoration-line: none;
+  color: #fefefe;
+}
+
+.heading {
+  color: orange;
+}
+
+.controls {
+  display: flex;
+  gap: 0.25rem;
+  margin: 2rem 0px;
+}
+
+.creator-controls {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.control-btn {
+  border-radius: 1rem;
+  background-color: orange;
+  padding: 0.2rem 1rem;
+}
+
+.control-btn a {
+  color: black;
+  font-weight: 600;
+}
+
+li {
+  color: rgb(128, 83, 0);
+}
+
+li > * {
+  color: #fefefe;
+}
+
+main {
+  padding: 1rem;
+}
+
+.notice {
+  color: green;
+}
+
+.alert {
+  color: red;
+}
+
+.attended-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.attended-events-heading {
+  margin: 0px;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.past-attended-events {
+  order: 2;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.submit-btn {
+  background-color: limegreen;
+  border-radius: 15px;
+  margin: 0px;
+  padding: 10px;
+  border: none;
+}
+
+input[type="text"] {
+  border-radius: 0.35rem;
+  border: none;
+  background-color: #fefefe;
+  outline: none;
+}
+
+.remember-me-checkbox {
+  display: flex;
+}
+
+.actions {
+  display: flex;
+  margin: 1rem 0px;
+}
+
+.actions > * {
+  flex: 1;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 10rem 15rem;
+  gap: 1rem;
+  justify-content: stretch;
+}
+
+.date-field {
+  display: flex;
+}
+
+.date-field > * {
+  flex: 1;
+} 
