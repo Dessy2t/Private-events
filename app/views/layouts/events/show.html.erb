@@ -1,0 +1,30 @@
+<h1 class="heading name"><%= @event.name %></h1>
+<p class="date"><span class="sub-heading">Date:</span> <%= @event.date || "None" %></p>
+<p class="location"><span class="sub-heading">Location:</span> <%= @event.location %></p>
+
+<div class="controls">
+  <% if current_user == @event.creator %>
+    <div class="creator-controls">
+      <span class="control-btn edit-link">
+        <%= link_to "Edit", edit_event_path(@event) %>
+      </span>
+      <span class="control-btn delete-link">
+        <%= link_to "Delete", @event, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
+      </span>
+    </div>
+  <% end %>
+  <% if @event.attendees.include?(current_user) %>
+    <span class="control-btn"> <%= link_to 'Unenroll', [@event, :unenroll], data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to unenroll?' } %> </span>
+  <% else %>
+    <span class="control-btn"> <%= link_to 'Enroll', [@event, :enroll], data: { turbo_method: :post } %> </span>
+  <% end %>
+</div>
+
+<h4 class="heading attendees-heading">Event Attendees: </h4>
+<ul class="attendees">
+  <% @event.attendees.each do |attendee| %>
+    <li class="attendee">
+      <p class="attendee-name"><%= attendee.username %></p>
+    </li>
+  <% end %>
+</ul>
