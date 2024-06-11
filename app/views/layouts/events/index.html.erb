@@ -1,0 +1,21 @@
+<h1 class="heading ">All Events</h1>
+
+<div class="events">
+  <h2 class="heading past-heading">Past Events: </h2>
+  <ul class="past-events">
+    <% @events.past.each do |event| %>
+      <li class="event">
+        <%= link_to event.name, event, class: 'title' %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2 class="heading future-heading">Upcoming Events: </h2>
+  <ul class="future-events">
+    <% @events.future.each do |event| %>
+      <li class="event">
+        <%= link_to event.name, event, class: 'title' %>
+      </li>
+    <% end %>
+  </ul>
+</div>
